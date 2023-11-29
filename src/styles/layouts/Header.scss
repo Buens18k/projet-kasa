@@ -1,20 +1,31 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-}
-nav {
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+
+  & img {
+    width: 210.322px;
+    height: 68px;
+  }
+
+  & nav {
     display: flex;
     align-items: center;
-    gap: 57px;
 
-    & a{
+    & ul {
+      display: flex;
+      gap: 57px;
+      list-style-type: none;
+
+      & a {
         font-family: Montserrat;
-        color: #FF6060;
+        color: #ff6060;
         text-decoration: none;
         text-align: right;
         font-size: 24px;
         font-style: normal;
         font-weight: 500;
+      }
     }
+  }
 }
