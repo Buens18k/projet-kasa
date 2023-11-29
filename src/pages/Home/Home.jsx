@@ -9,9 +9,8 @@ function Home() {
 
   return (
     <>
-    <div>
       <Header />
-    </div>
+      <p>Ici la page Home</p>
 
     </>
   )
