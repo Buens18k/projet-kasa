@@ -1,0 +1,20 @@
+:root {
+  background-color: #FFF;
+
+}
+
+
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1440px;
+  min-height: 100vh;
+  padding-top: 45px;
+}
+
+
+@media (prefers-color-scheme: light) {
+
+}
