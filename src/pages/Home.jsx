@@ -3,6 +3,7 @@
 // import viteLogo from '/vite.svg'
 import '../styles/layouts/Home.scss'
 import Header from '../components/Header'
+import HomeBanner from '../components/HomeBanner'
 
 function Home() {
   // const [count, setCount] = useState(0)
@@ -10,8 +11,7 @@ function Home() {
   return (
     <>
       <Header />
-      <p>Ici la page Home</p>
-
+      <HomeBanner />
     </>
   )
 }

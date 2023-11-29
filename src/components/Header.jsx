@@ -10,10 +10,10 @@ function Header() {
       <nav>
         <ul>
             <li>
-                <NavLink>Accueil</NavLink>
+                <NavLink to="/">Accueil</NavLink>
             </li>
             <li>
-                <NavLink>À Propos</NavLink>
+                <NavLink to="/about">À Propos</NavLink>
             </li>
         </ul>
       </nav>
