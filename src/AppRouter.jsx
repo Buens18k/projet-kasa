@@ -12,6 +12,10 @@ const AppRouter = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: '/error',
+    errorElement: <ErrorPage />,
+  },
+  {
     path: '/house',
     element: <House />,
   },

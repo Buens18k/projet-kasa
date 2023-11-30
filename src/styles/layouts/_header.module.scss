@@ -1,7 +1,9 @@
-header {
+.header {
   display: flex;
   justify-content: space-between;
   width: 87%;
+  padding-bottom: 50px;
+  margin: 0 auto;
 
   & img {
     width: 210.322px;
