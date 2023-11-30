@@ -1,0 +1,21 @@
+.home__location {
+  display: flex;
+  // grid-template-columns: repeat(3, 100%);
+  // justify-content: center;
+  // flex-direction: column;
+  width: 80%;
+  height: 829px;
+  border-radius: 25px;
+  background: #f6f6f6;
+  padding: 56px 50px 43px 50px;
+
+  &__card {
+    display: grid;
+    width: 340px;
+    height: 340px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: red;
+    // background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  }
+}

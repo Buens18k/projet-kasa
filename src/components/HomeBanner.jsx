@@ -1,12 +1,11 @@
-import '../styles/layouts/HomeBanner.scss'
+import style from '../styles/layouts/_home_banner.module.scss';
 
-function HomeBanner () {
-    return(
-        <div className="home_banner">
-            <h1>Chez vous, partout et ailleurs</h1>
-        </div>
-    )
+function HomeBanner() {
+  return (
+    <div className={style.home__banner}>
+      <h1>Chez vous, partout et ailleurs</h1>
+    </div>
+  );
 }
 
-
-export default HomeBanner
+export default HomeBanner;
