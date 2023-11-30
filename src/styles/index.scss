@@ -10,7 +10,16 @@ body {
   flex-direction: column;
   max-width: 1440px;
   min-height: 100vh;
-  padding-top: 45px;
+  margin: 0 auto;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 50px;
 }
 
 @media (prefers-color-scheme: light) {
