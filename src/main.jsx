@@ -1,20 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
 
-import Home from './pages/Home';
-import './styles/index.scss'
-
-const router = createBrowserRouter([{
-  path:"/",
-  element:<Home/>,
-}])
+import AppRouter from './AppRouter';
+import './styles/index.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={AppRouter} />
   </React.StrictMode>
-)
+);
