@@ -1,26 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import './utils/_mixins.scss';
 
-:root {
-  background-color: #fff;
-}
+@import './base/normalize.scss';
+@import './base/typography';
 
-body {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  max-width: 1440px;
-  min-height: 100vh;
-  margin: 0 auto;
-}
-
-#root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  // gap: 50px;
-}
-
-@media (prefers-color-scheme: light) {
-}
+@import './layouts/home_banner.module.scss';
