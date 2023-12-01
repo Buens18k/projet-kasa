@@ -1,0 +1,47 @@
+:root {
+    background-color: #fff;
+}
+
+body {
+    @include flex-center;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+#root {
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    margin: 0 auto;
+}
+
+main {
+    @include flex-center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer {
+    @include flex-center;
+}
+
+h1 {
+    @include flex-center;
+    color: #fff;
+}
+
+h2 {
+    @include flex-center;
+    color: #fff;
+}
+
+h3 {
+    @include flex-center;
+    color: #fff;
+    margin: 0;
+}

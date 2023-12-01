@@ -12,7 +12,7 @@ const AppRouter = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: '/house',
+    path: '/house/:id',
     element: <House />,
   },
   {
