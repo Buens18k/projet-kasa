@@ -9,6 +9,11 @@
   background: #f6f6f6;
   padding: 56px 50px 43px 50px;
 
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    width: 78%;
+  }
+
   @include mobile {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
