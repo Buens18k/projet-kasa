@@ -1,5 +1,7 @@
+@import '../utils/variables';
+
 :root {
-    background-color: #fff;
+    background-color: $primary-color;
 }
 
 body {
@@ -32,16 +34,16 @@ footer {
 
 h1 {
     @include flex-center;
-    color: #fff;
+    color: $primary-color;
 }
 
 h2 {
     @include flex-center;
-    color: #fff;
+    color: $primary-color;
 }
 
 h3 {
     @include flex-center;
-    color: #fff;
+    color: $primary-color;
     margin: 0;
 }
