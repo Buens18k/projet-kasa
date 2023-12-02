@@ -1,5 +1,8 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
 :root {
-    background-color: #fff;
+    background-color: $primary-color;
 }
 
 body {
@@ -7,6 +10,10 @@ body {
     max-width: 1440px;
     min-height: 100vh;
     margin: 0 auto;
+
+    @include mobile {
+        min-width: 375px
+    }
 }
 
 #root {
@@ -32,16 +39,20 @@ footer {
 
 h1 {
     @include flex-center;
-    color: #fff;
+    color: $primary-color;
 }
 
 h2 {
     @include flex-center;
-    color: #fff;
+    color: $primary-color;
 }
 
 h3 {
     @include flex-center;
-    color: #fff;
+    color: $primary-color;
     margin: 0;
+}
+
+a{
+
 }

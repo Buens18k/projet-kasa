@@ -1,11 +1,11 @@
+@import '../utils/mixins';
+
 .home_main {
   flex-direction: column;
   padding-bottom: 50px;
+
+  @include mobile {
+    padding-bottom: 27px;
+  }
 }
 
-// @keyframes logo-spin {
-
-// }
-
-@media (prefers-reduced-motion: no-preference) {
-}
