@@ -1,0 +1,18 @@
+.ctaAccordion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 38px;
+    width: 70%;
+
+    &__item{
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        height: 52px;
+        background-color: red;
+        color: white;
+        width: 100%;
+    }
+}

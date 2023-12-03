@@ -1,7 +1,18 @@
 .about_banner{
+    display: flex;
     width: 1240px;
     height: 223px;
     flex-shrink: 0;
     background-image: url(../../assets/bannerAbout.png);
     background-position: center;
+    border-radius: 25px;
+    mix-blend-mode: darken;
+
+    &::before{
+        position: relative;
+        content: "";
+        width: 100%;
+        opacity: 0.1;
+        background: #000;
+    }
 }
