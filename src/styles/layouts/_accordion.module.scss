@@ -1,18 +1,43 @@
-.ctaAccordion{
+.ctaAccordionAbout {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 38px;
+  width: 70%;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    height: 52px;
+    background-color: red;
+    color: white;
+    width: 100%;
+  }
+}
+
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px 10px 15px;
+
+  &_arrow {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 38px;
-    width: 70%;
+    width: 4%;
+    height: 4%;
+  }
+}
 
-    &__item{
-        display: flex;
-        align-items: center;
-        // justify-content: center;
-        height: 52px;
-        background-color: red;
-        color: white;
-        width: 100%;
-    }
+.rotate {
+  transform: rotate(-180deg);
+  transition: transform 0.5s ease;
+}
+
+.rotateInverse {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+  
 }

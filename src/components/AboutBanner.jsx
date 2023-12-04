@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../styles/layouts/_house_banner.module.scss';
+import style from '../styles/layouts/_about_banner.module.scss';
 
 function HouseBanner() {
   return <div className={style.about_banner}></div>;
