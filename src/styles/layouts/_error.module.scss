@@ -1,9 +1,26 @@
 @import '../utils/mixins';
+@import '../utils/variables';
 
 .ctaErrorMsg {
-    @include flex-column-center;
+  @include flex-column-center;
+  width: 100%;
+  margin: 0 auto;
+  gap: 139px;
+
+  &__title {
+    font-size: 288px;
+    color: $secondary-color;
+    font-weight: 700;
     width: 100%;
-    margin: 0 auto;
-    padding-top: 40px;
-    gap: 139px;
+    height: 100%;
+  }
+
+  &__message {
+    font-size: 36px;
+    color: $secondary-color;
+  }
+
+  &__link {
+    color: $secondary-color;
+  }
 }

@@ -4,7 +4,7 @@ export default function House() {
   return (
     <>
       <Main>
-        <div>Ici la page qui va fficher le logement en question (cliqué)</div>
+        <div>Ici la page qui va fficher le logement en question cliqué</div>
       </Main>
     </>
   );
