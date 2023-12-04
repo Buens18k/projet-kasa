@@ -9,25 +9,43 @@
   &__item {
     display: flex;
     align-items: center;
-    // justify-content: center;
-    height: 52px;
-    background-color: red;
     color: white;
     width: 100%;
+    border-radius: 5px;
+
   }
 }
 
 .accordion {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
-  padding: 10px 20px 10px 15px;
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: red;
+    padding: 10px 20px 10px 15px;
+    border-radius: 5px;
+  }
 
   &_arrow {
-    display: flex;
-    justify-content: center;
     width: 4%;
-    height: 4%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  &_content {
+    display: flex;
+    background: #f6f6f6;
+    color: red;
+    width: 100%;
+    padding: 15px 20px 15px 15px;
+    border-radius: 0px 0px 5px 5px;
+    margin: 0;
+    transition: transform 500ms ease;
   }
 }
 
@@ -37,7 +55,7 @@
 }
 
 .rotateInverse {
-    transform: rotate(0deg);
-    transition: transform 0.5s ease;
-  
+  transform: rotate(0deg);
+  transition: transform 0.5s ease;
 }
+
