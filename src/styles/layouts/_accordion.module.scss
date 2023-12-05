@@ -6,14 +6,6 @@
   margin-top: 38px;
   width: 70%;
 
-  &__item {
-    display: flex;
-    align-items: center;
-    color: white;
-    width: 100%;
-    border-radius: 5px;
-
-  }
 }
 
 .accordion {
@@ -21,6 +13,8 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  max-height: 0%;
+  transition: max-height 1s ease;
 
   &_item {
     display: flex;
@@ -45,7 +39,6 @@
     padding: 15px 20px 15px 15px;
     border-radius: 0px 0px 5px 5px;
     margin: 0;
-    transition: transform 500ms ease;
   }
 }
 
