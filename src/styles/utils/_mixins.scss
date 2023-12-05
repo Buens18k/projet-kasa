@@ -1,25 +1,39 @@
 @import '../utils/maps';
 
 @mixin mobile {
-    @media screen and (max-width: map-get($breakpoints, mobile)) {
-        @content;
-    }
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media screen and (max-width: map-get($breakpoints, tablet)) {
-        @content;
-    }
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
 }
 
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flex-column-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+// **************  Keyframe ********************
+
+@mixin keyframeArrow($name, $from, $to) {
+  @keyframes #{$name} {
+    from {
+      transform: rotate(#{$from});
+    }
+    to {
+      transform: rotate(#{$to});
+    }
+  }
+}
+

@@ -1,26 +1,52 @@
-import { React, useState } from 'react';
+import { React, useState, useRef } from 'react';
 import ArrowBack from '../assets/arrowBack.svg';
 import style from '../styles/layouts/_accordion.module.scss';
 
-function Accordion({ title, content }) {
+export default function Accordion({ title, content }) {
+  const head = useRef(null);
+  const contient = useRef(null);
+
+  const [key, setKey] = useState(0);
   const [isActive, setIsActive] = useState(false);
+
+  // Fonction qui déroule l'accordéon selon la taille et ajoute une propriété pour son style
+  const toogleAccordeon = () => {
+    console.log(head.current);
+
+    if (contient.current.style.maxHeight) {
+      contient.current.style.maxHeight = null;
+      contient.current.style.padding = null;
+    } else {
+      contient.current.style.maxHeight = `${contient.current.scrollHeight}px`;
+      contient.current.style.padding = `20px 20px 20px 15px`;
+    }
+    setKey((preKey) => preKey + 1);
+    setIsActive(!isActive);
+  };
+
   console.log(isActive);
+
   return (
     <div className={style.accordion}>
-      <div className={style.accordion_item}>
-        <h3>{title}</h3>
+      <div className={style.accordion__head} ref={head}>
+        {<h3>{title}</h3>}
         {
+          // Selon l'état du click
           <img
-            onClick={() => setIsActive(!isActive)}
+            key={key}
             src={ArrowBack}
-            alt="Flèche vers le haut"
-            className={isActive ? `${style.accordion_arrow} ${style.rotate}` : `${style.accordion_arrow} ${style.rotateInverse}`}
+            alt="flèche vers le haut"
+            // Joue l'animation en fonction de l'état
+            className={`${style.accordion__arrow} ${isActive ? style.rotateIn : style.rotateOut}`}
+            // Appel au click la fonction
+            onClick={toogleAccordeon}
           />
         }
       </div>
-      {isActive && <p className={style.accordion_content}>{content}</p>}
+      {/* Qui affiche ce que contient le props "content" */}
+      <div className={style.accordion__content} ref={contient}>
+        {content}
+      </div>
     </div>
   );
 }
-
-export default Accordion;
