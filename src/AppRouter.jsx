@@ -20,7 +20,7 @@ const AppRouter = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/house/:id',
+        path: '/house/:title',
         element: <House />,
       },
       {

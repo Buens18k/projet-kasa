@@ -1,10 +1,12 @@
 import Main from '../components/Main';
+import Caroussel from '../components/Caroussel';
 
 export default function House() {
   return (
     <>
       <Main>
-        <div>Ici la page qui va fficher le logement en question cliqué</div>
+        <Caroussel />
+        <div>Information du logement en question cliqué</div>
       </Main>
     </>
   );
