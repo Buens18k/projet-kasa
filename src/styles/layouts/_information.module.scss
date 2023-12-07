@@ -1,0 +1,66 @@
+@import '../utils/variables';
+
+.ctaInformation {
+  display: flex;
+  justify-content: space-between;
+
+  width: 87%;
+  height: auto;
+  padding-top: 30px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      justify-content: flex-start;
+      color: $secondary-color;
+      font-size: 36px;
+      margin: 0;
+      height: 51px;
+    }
+
+    &__location {
+      color: $secondary-color;
+      margin: 0;
+    }
+
+    &__tagHouse {
+      ul {
+        display: flex;
+        gap: 10px;
+        margin: 0;
+        padding-left: 0;
+        padding-top: 20px;
+
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          list-style: none;
+          background: $secondary-color;
+          color: $primary-color;
+          font-size: 14px;
+          padding: 3px 41px 2px 40px;
+          height: 25px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  &__host{
+    display: flex;
+
+    &__name{
+        color: $secondary-color;
+        height: 52px;
+    }
+
+    &__pictureHost{
+        clip-path: circle(64px);
+        object-fit: cover;
+    }
+  }
+}
