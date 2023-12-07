@@ -19,7 +19,7 @@ export default function House() {
   const house = houses.find((h) => h.title === title);
   // console.log('Données du logement :',house)
 
-  return (
+   return (
     <>
       <Main>
         <Caroussel pictures={house.pictures} />
@@ -27,8 +27,8 @@ export default function House() {
           titleHouse = {house.title}
           location = {house.location}
           tags = {house.tags}
-          name = {house.host.name}
-          nameHost = {house.host.picture}
+          nameHost = {house.host.name}
+          pictureHost = {house.host.picture}
         />
       </Main>
     </>

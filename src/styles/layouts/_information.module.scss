@@ -6,11 +6,11 @@
 
   width: 87%;
   height: auto;
-  padding-top: 30px;
 
   &__info {
     display: flex;
     flex-direction: column;
+      padding-top: 30px;
 
     &__title {
       justify-content: flex-start;
@@ -50,17 +50,22 @@
     }
   }
 
-  &__host{
+  &__host {
     display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+      padding-top: 24px;
 
-    &__name{
-        color: $secondary-color;
-        height: 52px;
+    &__name {
+      color: $secondary-color;
     }
 
-    &__pictureHost{
-        clip-path: circle(64px);
-        object-fit: cover;
+    &__pictureHost {
+      // clip-path: circle(64px);
+      border-radius: 100px;
+      object-fit: cover;
+      width: 34%;
+      height: 50%;
     }
   }
 }

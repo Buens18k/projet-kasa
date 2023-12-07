@@ -1,7 +1,12 @@
 import React from 'react';
 import style from '../styles/layouts/_information.module.scss';
 
-function Information({ titleHouse, location, tags, name, nameHost }) {
+function Information({ titleHouse, location, tags, nameHost, pictureHost }) {
+  // Divise la chaîne en utilisant ' ' comme delimiteur
+  const [firstName, lastName] = nameHost.split(' ');
+  console.log('Le prénom :', firstName);
+  console.log('Le Nom :', lastName);
+
   return (
     <>
       <div className={style.ctaInformation}>
@@ -17,10 +22,11 @@ function Information({ titleHouse, location, tags, name, nameHost }) {
           </div>
         </div>
         <div className={style.ctaInformation__host}>
-          <div className={style.ctaInformation__host__name}><p>{name}</p></div>
-          <div>
-            <img className={style.ctaInformation__host__pictureHost} src={nameHost} alt="" />
+          <div className={style.ctaInformation__host__name}>
+            <span>{firstName}</span> <br />
+            <span>{lastName}</span>
           </div>
+          <img className={style.ctaInformation__host__pictureHost} src={pictureHost} alt="portrait de l'hôte" />
         </div>
       </div>
 
