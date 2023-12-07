@@ -1,6 +1,30 @@
-.caroussel{
-    display: flex;
-    border: 2px solid red;
-    width: 87%;
-    height: 415px;
+.caroussel {
+  display: flex;
+  width: 87%;
+  height: 415px;
+  position: relative;
+  top: 20%;
+  border-radius: 21px;
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 21px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 39%;
+    width: 46.68px;
+    height: 79.2px;
+    cursor: pointer;
+  }
+
+  &__arrowLeft {
+    left: 21px;
+  }
+
+  &__arrowRight {
+    right: 21px;
+  }
 }

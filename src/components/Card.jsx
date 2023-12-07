@@ -10,7 +10,7 @@ export default function Card({ card }) {
   };
 
   if (redirect) {
-    console.log(redirect);
+    // console.log(redirect);
     return <Navigate to={`/house/${card.title}`} />;
   }
 

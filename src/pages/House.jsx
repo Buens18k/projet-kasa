@@ -3,24 +3,27 @@ import Main from '../components/Main';
 import Caroussel from '../components/Caroussel';
 
 import { useParams } from 'react-router-dom';
-
-import Error from '../pages/Error-page.jsx';
+import { DataContext } from '../contexts/DataContext.jsx';
+import { useContext } from 'react';
 
 export default function House() {
-  // Récupère depuis l'URL le titre du logement
+  // Récupère depuis l'URL, le titre du logement
   const { title } = useParams();
-  console.log('Titre extrait depui lURL :',title);
-  // Parcours le tableau data pour trouver l'objet qui corrrespond au titre extrait
-  const house = data.find((h) => h.title === title);
-  console.log('Données du logement :',house)
+  
+  // Accède au contexte du tableau 'houses' pré-établi dans le 'DataContext'
+  const { houses } = useContext(DataContext);
+  // console.log('Contexte du tableau houses :',houses);
 
+  // Parcours le context du tableau houses pour trouver l'objet qui correspond au titre extrait
+  const house = houses.find(h => h.title === title)
+  // console.log('Données du logement :',house)
+  
   return (
     <>
       <Main>
-        <p>{house.title}</p>
-        <img src={house.pictures[0]} alt="" />
-        <Caroussel />
-        <div>Information du logement en question cliqué</div>
+        <Caroussel
+          pictures={house.pictures}
+        />
       </Main>
     </>
   );
