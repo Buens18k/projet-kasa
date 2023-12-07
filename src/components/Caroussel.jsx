@@ -4,7 +4,7 @@ import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
 
 export default function Caroussel({ pictures }) {
-  console.log('Les pictures :', pictures);
+  // console.log('Les pictures :', pictures);
 
   // Défini l'index de l'image courante.
   const [currentImage, setCurrentImage] = useState(0);
@@ -23,7 +23,7 @@ export default function Caroussel({ pictures }) {
     setCurrentImage((prev) => (prev + 1) % pictures.length);
   };
 
-  console.log(currentImage);
+  console.log('Index de l image courante :', currentImage);
   return (
     <>
       <div className={style.caroussel}>
