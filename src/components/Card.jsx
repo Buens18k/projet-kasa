@@ -9,9 +9,9 @@ export default function Card({ card }) {
     setRedirect(true);
   };
 
-  if(redirect) {
-    console.log(redirect)
-    return <Navigate to={`/house/${card.title}`} />
+  if (redirect) {
+    console.log(redirect);
+    return <Navigate to={`/house/${card.title}`} />;
   }
 
   return (
