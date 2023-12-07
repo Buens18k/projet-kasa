@@ -31,9 +31,6 @@ export default function Caroussel({ pictures }) {
         <img src={pictures[currentImage]} alt="photo de l'appartement" className={style.caroussel__image} />
         <RightArrow onClick={nextImg} />
       </div>
-      <div>
-        <p>Informations Logements</p>
-      </div>
     </>
   );
 }
