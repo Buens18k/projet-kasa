@@ -10,7 +10,7 @@
   &__info {
     display: flex;
     flex-direction: column;
-      padding-top: 30px;
+    padding-top: 30px;
 
     &__title {
       justify-content: flex-start;
@@ -50,22 +50,28 @@
     }
   }
 
-  &__host {
+  &__profil {
     display: flex;
-    justify-content: flex-end;
-    gap: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+    &__host {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
       padding-top: 24px;
 
-    &__name {
-      color: $secondary-color;
-    }
+      &__name {
+        color: $secondary-color;
+        padding-top: 6px;
+      }
 
-    &__pictureHost {
-      // clip-path: circle(64px);
-      border-radius: 100px;
-      object-fit: cover;
-      width: 34%;
-      height: 50%;
+      &__pictureHost {
+        // clip-path: circle(64px);
+        border-radius: 100px;
+        object-fit: cover;
+        width: 46%;
+        height: 67%;
+      }
     }
   }
 }

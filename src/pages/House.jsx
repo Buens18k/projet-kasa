@@ -29,6 +29,7 @@ export default function House() {
           tags = {house.tags}
           nameHost = {house.host.name}
           pictureHost = {house.host.picture}
+          ratings = {house.rating}
         />
       </Main>
     </>
