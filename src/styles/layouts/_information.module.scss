@@ -1,4 +1,5 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .ctaInformation {
   display: flex;
@@ -7,31 +8,64 @@
   width: 87%;
   height: auto;
 
-  &__info {
-    display: flex;
+  @include tablet {
+    justify-content: flex-start;
     flex-direction: column;
-    padding-top: 30px;
+  }
 
-    &__title {
-      justify-content: flex-start;
-      color: $secondary-color;
-      font-size: 36px;
-      margin: 0;
-      height: 51px;
-    }
+  @include mobile {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
 
-    &__location {
-      color: $secondary-color;
-      margin: 0;
-    }
+  &__house {
+    width: 100%;
+    height: auto;
 
-    &__tagHouse {
-      ul {
-        display: flex;
-        gap: 10px;
+    &__info {
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+      width: 100%;
+
+      &__title {
+        justify-content: flex-start;
+        color: $secondary-color;
+        font-size: 36px;
         margin: 0;
+        width: 100%;
+        height: 51px;
+
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+
+      &__location {
+        color: $secondary-color;
+        margin: 0;
+        width: 100%;
+        height: auto;
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+    }
+    &__tags {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
         padding-left: 0;
-        padding-top: 20px;
+
+        @include tablet {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include mobile {
+          grid-template-columns: repeat(3, 1fr);
+        }
 
         li {
           display: flex;
@@ -42,9 +76,20 @@
           background: $secondary-color;
           color: $primary-color;
           font-size: 14px;
-          padding: 3px 41px 2px 40px;
-          height: 25px;
+          height: 100%;
+          min-width: 115px;
           border-radius: 10px;
+          padding: 0px 20px;
+
+          @include tablet {
+            min-width: 98px;
+          }
+
+          @include mobile {
+            font-size: 10px;
+            padding: 0;
+            min-width: 84px;
+          }
         }
       }
     }
@@ -54,22 +99,114 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 30%;
+
+    @include tablet {
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+      width: 100%;
+    }
+
+    @include mobile {
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+      width: 100%;
+    }
+
     &__host {
       display: flex;
       justify-content: flex-end;
       gap: 10px;
       padding-top: 24px;
+      width: 60%;
+      height: 53%;
+
+      @include tablet {
+        padding: 0;
+        height: auto;
+      }
+
+      @include mobile {
+        padding: 0;
+        height: auto;
+      }
 
       &__name {
+        display: flex;
+        flex-direction: column;
         color: $secondary-color;
         padding-top: 6px;
+        width: 100%;
+        
+        @include tablet {
+          font-size: 16px;
+        }
+
+        @include mobile {
+          padding: 0;
+          font-size: 12px;
+        }
+
+        &__first {
+          display: flex;
+          justify-content: end;
+          margin: 0;
+
+          @include mobile {
+            height: 15px;
+          }
+        }
+        &__last {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          margin: 0;
+
+          @include mobile {
+            height: 23px;
+          }
+        }
       }
 
       &__pictureHost {
         border-radius: 100px;
         object-fit: cover;
-        width: 52%;
-        height: 67%;
+        height: 66%;
+
+        @include tablet {
+          width: 64px;
+        }
+
+        @include mobile {
+          width: 32px;
+        }
+      }
+    }
+
+    &__rating {
+      display: flex;
+      justify-content: flex-end;
+
+      @include tablet {
+        justify-content: flex-start;
+      }
+
+      @include mobile {
+        justify-content: flex-start;
+      }
+
+      &__star {
+        width: 18%;
+
+        @include tablet {
+          width: 15%;
+        }
+
+        @include mobile {
+          width: 15%;
+        }
       }
     }
   }

@@ -1,3 +1,5 @@
+@import '../utils/mixins.scss';
+
 .caroussel {
   display: flex;
   width: 87%;
@@ -5,6 +7,14 @@
   position: relative;
   top: 20%;
   border-radius: 21px;
+
+  @include tablet {
+    height: 310px;
+  }
+
+  @include mobile {
+    height: 255px;
+  }
 
   &__image {
     width: 100%;
@@ -18,13 +28,27 @@
     width: 46.68px;
     height: 79.2px;
     cursor: pointer;
+
+    @include mobile {
+      width: 24px;
+      height: 24px;
+      top: 45%;
+    }
   }
 
   &__arrowLeft {
     left: 21px;
+
+    @include mobile {
+      left: 10px;
+    }
   }
 
   &__arrowRight {
     right: 21px;
+
+    @include mobile {
+      right: 10px;
+    }
   }
 }
