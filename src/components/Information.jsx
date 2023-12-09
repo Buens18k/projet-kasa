@@ -1,12 +1,14 @@
 import React from 'react';
 import style from '../styles/layouts/_information.module.scss';
+import styles from '../styles/layouts/_accordion.module.scss';
 import RatingStars from './RatingStars';
+import Accordion from '../components/Accordion';
 
-function Information({ titleHouse, location, tags, nameHost, pictureHost, ratings }) {
+function Information({ titleHouse, location, tags, nameHost, pictureHost, ratings, description, equipments }) {
   // Divise la chaîne en utilisant ' ' comme delimiteur
   const [firstName, lastName] = nameHost.split(' ');
-  console.log('Le prénom :', firstName);
-  console.log('Le Nom :', lastName);
+  // console.log('Le prénom :', firstName);
+  // console.log('Le Nom :', lastName);
 
   return (
     <>
@@ -37,7 +39,14 @@ function Information({ titleHouse, location, tags, nameHost, pictureHost, rating
           {/* </div> */}
         </div>
       </div>
-      <div>Accordeon</div>
+      <div className={styles.ctaAccordionHouse}>
+        <div className={styles.ctaAccordionHouse__item}>
+          <Accordion title="Description" content={description} />
+        </div>
+        <div className={styles.ctaAccordionHouse__item}>
+          <Accordion title="Equipements" content={equipments} />
+        </div>
+      </div>
     </>
   );
 }

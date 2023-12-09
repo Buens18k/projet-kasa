@@ -1,5 +1,5 @@
 import { React, useState, useRef } from 'react';
-import ArrowBack from '../assets/arrowBack.svg';
+import ArrowBack from '../assets/arrowBack.png';
 import style from '../styles/layouts/_accordion.module.scss';
 
 export default function Accordion({ title, content }) {
@@ -11,7 +11,8 @@ export default function Accordion({ title, content }) {
 
   // Fonction qui déroule l'accordéon selon la taille et ajoute une propriété pour son style
   const toogleAccordeon = () => {
-    // console.log(head.current);
+    console.log(head.current);
+    console.log(contient.current)
 
     if (contient.current.style.maxHeight) {
       contient.current.style.maxHeight = null;

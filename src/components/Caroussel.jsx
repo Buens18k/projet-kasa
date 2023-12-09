@@ -23,7 +23,7 @@ export default function Caroussel({ pictures }) {
     setCurrentImage((prev) => (prev + 1) % pictures.length);
   };
 
-  console.log('Index de l image courante :', currentImage);
+  // console.log('Index de l image courante :', currentImage);
   return (
     <>
       <div className={style.caroussel}>

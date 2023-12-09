@@ -6,6 +6,9 @@ import Information from '../components/Information.jsx';
 import { useParams } from 'react-router-dom';
 import { DataContext } from '../contexts/DataContext.jsx';
 import { useContext } from 'react';
+import Accordion from '../components/Accordion.jsx';
+
+import style from '../styles/layouts/_accordion.module.scss';
 
 export default function House() {
   // Récupère depuis l'URL, le titre du logement
@@ -19,18 +22,28 @@ export default function House() {
   const house = houses.find((h) => h.title === title);
   // console.log('Données du logement :',house)
 
-   return (
+  return (
     <>
       <Main>
         <Caroussel pictures={house.pictures} />
         <Information
-          titleHouse = {house.title}
-          location = {house.location}
-          tags = {house.tags}
-          nameHost = {house.host.name}
-          pictureHost = {house.host.picture}
-          ratings = {house.rating}
+          titleHouse={house.title}
+          location={house.location}
+          tags={house.tags}
+          nameHost={house.host.name}
+          pictureHost={house.host.picture}
+          ratings={house.rating}
+          description={house.description}
+          equipments={house.equipments}
         />
+        {/* <div>
+          <div className={style.ctaAccordionHouse}>
+            <Accordion title="Desciption" content={house.description} />
+          </div>
+          <div className={style.ctaAccordionHouse}>
+            <Accordion title="Equipement" content={house.equipments} />
+          </div>
+        </div> */}
       </Main>
     </>
   );

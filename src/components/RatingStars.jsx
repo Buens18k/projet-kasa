@@ -4,7 +4,7 @@ import Star from '../assets/star.png';
 import StarRed from '../assets/starRed.png';
 
 function RatingStars({ ratings }) {
-  console.log(ratings);
+  // console.log(ratings);
 
   // Nombre d'étoile
   const numberStars = [1, 2, 3, 4, 5];
