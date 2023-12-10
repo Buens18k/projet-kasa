@@ -3,12 +3,16 @@ import style from '../styles/layouts/_information.module.scss';
 import styles from '../styles/layouts/_accordion.module.scss';
 import RatingStars from './RatingStars';
 import Accordion from '../components/Accordion';
+import House from '../pages/House';
 
 function Information({ titleHouse, location, tags, nameHost, pictureHost, ratings, description, equipments }) {
   // Divise la chaîne en utilisant ' ' comme delimiteur
   const [firstName, lastName] = nameHost.split(' ');
   // console.log('Le prénom :', firstName);
   // console.log('Le Nom :', lastName);
+
+  // Parcours la liste 'equipments' et pour chaque équipment 'e', crée une 'li'
+  const equipmentsList = equipments.map((e) => <li key={e}>{e}</li>);
 
   return (
     <>
@@ -44,7 +48,7 @@ function Information({ titleHouse, location, tags, nameHost, pictureHost, rating
           <Accordion title="Description" content={description} />
         </div>
         <div className={styles.ctaAccordionHouse__item}>
-          <Accordion title="Equipements" content={equipments} />
+          <Accordion title="Equipements" content={equipmentsList} />
         </div>
       </div>
     </>

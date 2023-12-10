@@ -22,6 +22,10 @@ export default function House() {
   const house = houses.find((h) => h.title === title);
   // console.log('Données du logement :',house)
 
+  // const equipmentsList = house.equipments.map((e) =>
+  //   <li key={e}>{e}</li>
+  // )
+// console.log(equipmentsList)
   return (
     <>
       <Main>
