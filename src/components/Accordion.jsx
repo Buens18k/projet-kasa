@@ -6,7 +6,6 @@ export default function Accordion({ title, content }) {
   const head = useRef(null);
   const contient = useRef(null);
 
-  // const [key, setKey] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
   // Fonction qui déroule l'accordéon selon la taille et ajoute une propriété pour son style
@@ -19,9 +18,8 @@ export default function Accordion({ title, content }) {
       contient.current.style.padding = null;
     } else {
       contient.current.style.maxHeight = `${contient.current.scrollHeight}px`;
-      contient.current.style.padding = `20px 20px 20px 15px`;
+      contient.current.style.padding = `4%`;
     }
-    // setKey((preKey) => preKey + 1);
     setIsActive(!isActive);
   };
 
@@ -31,11 +29,10 @@ export default function Accordion({ title, content }) {
   return (
     <div className={style.accordion}>
       <div className={style.accordion__head} ref={head}>
-        {<h3>{title}</h3>}
+        {<h3 className={style.accordion__head__title}>{title}</h3>}
         {
           // Selon l'état du click
           <img
-            // key={key}
             src={ArrowBack}
             alt="flèche vers le haut"
             // Joue l'animation en fonction de l'état

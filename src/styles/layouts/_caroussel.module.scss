@@ -25,13 +25,13 @@
   &__arrow {
     position: absolute;
     top: 39%;
-    width: 46.68px;
-    height: 79.2px;
+    width: 5%;
+    height: 19%;
     cursor: pointer;
 
     @include mobile {
-      width: 24px;
-      height: 24px;
+      width: 5%;
+      height: 9%;
       top: 45%;
     }
   }

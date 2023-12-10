@@ -9,7 +9,7 @@
   margin-top: 38px;
   width: 70%;
 
-  &__item{
+  &__item {
     background-color: $secondary-color;
     border-radius: 5px 5px 8px 8px;
     width: 100%;
@@ -22,9 +22,19 @@
   gap: 76px;
   width: 87%;
 
+  @include mobile {
+    gap: 30px;
+    margin-top: 13.5px;
+    flex-direction: column;
+  }
+
   &__item {
     width: 50%;
     list-style-type: none;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }
 
@@ -39,6 +49,17 @@
     color: #f6f6f6;
     padding: 10px 20px 10px 15px;
     border-radius: 5px;
+    height: 100%;
+
+    @include mobile {
+      padding: 5px 10px 5px 10px;
+    }
+
+    &__title {
+      @include mobile {
+        font-size: 13px;
+      }
+    }
   }
 
   &__content {
@@ -51,13 +72,24 @@
     overflow: hidden;
     // Animation du content sur la propriété
     transition: max-height 0.15s ease;
-    // width: 100.2%;
     padding: 0px 20px 0px 15px;
     border-radius: 0px 0px 5px 5px;
+
+    @include tablet {
+      font-weight: 400;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 
   &__arrow {
     cursor: pointer;
+
+    @include mobile {
+      width: 32px;
+    }
   }
 }
 // Animation de la flèche
