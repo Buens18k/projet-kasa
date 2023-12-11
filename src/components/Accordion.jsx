@@ -18,7 +18,8 @@ export default function Accordion({ title, content }) {
       contient.current.style.padding = null;
     } else {
       contient.current.style.maxHeight = `${contient.current.scrollHeight}px`;
-      contient.current.style.padding = `4%`;
+      contient.current.style.padding = '20px 20px 20px 15px'
+
     }
     setIsActive(!isActive);
   };
@@ -36,7 +37,7 @@ export default function Accordion({ title, content }) {
             src={ArrowBack}
             alt="flèche vers le haut"
             // Joue l'animation en fonction de l'état
-            className={`${style.accordion__arrow} ${isActive ? style.rotateIn : style.rotateOut}`}
+            className={`${style.accordion__arrow} ${isActive && style.rotateIn }`}
             // Appel au click la fonction
             onClick={toogleAccordeon}
           />
@@ -44,7 +45,13 @@ export default function Accordion({ title, content }) {
       </div>
       {/* Qui affiche ce que contient le props "content" */}
       <div className={style.accordion__content} ref={contient}>
+        <div
+        className={`${style.accordion__content__inside} ${isActive && style.active }`}
+
+        >
         {content}
+
+        </div>
       </div>
     </div>
   );

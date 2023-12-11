@@ -71,7 +71,8 @@
     max-height: 0;
     overflow: hidden;
     // Animation du content sur la propriété
-    transition: max-height 0.15s ease;
+ 
+    transition: all 0.5s ease;
     padding: 0px 20px 0px 15px;
     border-radius: 0px 0px 5px 5px;
 
@@ -82,10 +83,19 @@
     @include mobile {
       font-size: 12px;
     }
+    &__is_open {
+      padding: 20px 20px 20px 15px;
+    }
+    &__inside{
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: all  0.3s ease;
+    }
   }
 
   &__arrow {
     cursor: pointer;
+    transition: all 0.5s ease;
 
     @include mobile {
       width: 32px;
@@ -94,12 +104,10 @@
 }
 // Animation de la flèche
 .rotateIn {
-  animation: rotateIn 0.5s ease forwards;
+  transform: rotate(180deg);
+}
+.active{
+  opacity: 1;
+  transform: translateY(0px)
 }
 
-.rotateOut {
-  animation: rotateOut 0.5s ease forwards;
-}
-// Sens de Rotation de la flèche
-@include keyframeArrow('rotateIn', 0deg, -180deg);
-@include keyframeArrow('rotateOut', -180deg, 0deg);

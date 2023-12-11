@@ -5,3 +5,7 @@
 @import './base/typography';
 
 @import './layouts/home_banner.module.scss';
+html, 
+body {
+    height: 100%;
+}

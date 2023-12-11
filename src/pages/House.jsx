@@ -1,33 +1,21 @@
-import data from '../../data.json';
 import Main from '../components/Main';
+import data from '../../data.json';
+
 import Caroussel from '../components/Caroussel';
 import Information from '../components/Information.jsx';
 
-import { useParams } from 'react-router-dom';
-import { DataContext } from '../contexts/DataContext.jsx';
-import { useContext } from 'react';
-import Accordion from '../components/Accordion.jsx';
+import { useLoaderData } from 'react-router-dom';
 
-import style from '../styles/layouts/_accordion.module.scss';
 
+export async function loader({ params }) {
+  const {title}=params;
+  const house = data.find((h) => h.title.toLowerCase().split(' ').join('-') === title);
+  return { house };
+}
 export default function House() {
-  // Récupère depuis l'URL, le titre du logement
-  const { title } = useParams();
+  const { house } = useLoaderData();
 
-  // Accède au contexte du tableau 'houses' pré-établi dans le 'DataContext'
-  const { houses } = useContext(DataContext);
-  // console.log('Contexte du tableau houses :',houses);
-
-  // Parcours le context du tableau houses pour trouver l'objet qui correspond au titre extrait
-  const house = houses.find((h) => h.title === title);
-  // console.log('Données du logement :',house)
-
-  // const equipmentsList = house.equipments.map((e) =>
-  //   <li key={e}>{e}</li>
-  // )
-// console.log(equipmentsList)
   return (
-    <>
       <Main>
         <Caroussel pictures={house.pictures} />
         <Information
@@ -40,15 +28,6 @@ export default function House() {
           description={house.description}
           equipments={house.equipments}
         />
-        {/* <div>
-          <div className={style.ctaAccordionHouse}>
-            <Accordion title="Desciption" content={house.description} />
-          </div>
-          <div className={style.ctaAccordionHouse}>
-            <Accordion title="Equipement" content={house.equipments} />
-          </div>
-        </div> */}
       </Main>
-    </>
   );
 }
