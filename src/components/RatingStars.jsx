@@ -6,7 +6,7 @@ import StarRed from '../assets/starRed.png';
 function RatingStars({ ratings }) {
   // console.log(ratings);
 
-  // Nombre d'étoile
+  // Crée un tableau pour le nombre d'étoile à afficher
   const numberStars = [1, 2, 3, 4, 5];
 
   return (

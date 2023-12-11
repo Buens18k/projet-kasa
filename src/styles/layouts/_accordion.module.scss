@@ -86,20 +86,18 @@
 
   &__arrow {
     cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
 
     @include mobile {
       width: 32px;
     }
   }
 }
-// Animation de la flèche
-.rotateIn {
-  animation: rotateIn 0.5s ease forwards;
-}
 
-.rotateOut {
-  animation: rotateOut 0.5s ease forwards;
+// Animation de la flèche
+
+.rotate180 {
+  transform: rotate(-180deg);
+  transition: transform 0.5s ease;
 }
-// Sens de Rotation de la flèche
-@include keyframeArrow('rotateIn', 0deg, -180deg);
-@include keyframeArrow('rotateOut', -180deg, 0deg);

@@ -11,7 +11,8 @@ function Information({ titleHouse, location, tags, nameHost, pictureHost, rating
   // console.log('Le prénom :', firstName);
   // console.log('Le Nom :', lastName);
 
-  // Parcours la liste 'equipments' et pour chaque équipment 'e', crée une 'li'
+  // Parcours la liste 'equipments' reçu en prop
+  // et pour chaque équipment 'e', crée une liste ('li') qui sera stocké dans la variable 'equipmentsList'
   const equipmentsList = equipments.map((e) => <li key={e}>{e}</li>);
 
   return (
@@ -38,13 +39,13 @@ function Information({ titleHouse, location, tags, nameHost, pictureHost, rating
             </div>
             <img className={style.ctaInformation__profil__host__pictureHost} src={pictureHost} alt="portrait de l'hôte" />
           </div>
-          {/* <div className={style.informationRating}> */}
+          {/* Appel du composant 'RatingStars' en lui donnant le prop 'ratings' */}
           <RatingStars ratings={Number(ratings)} />
-          {/* </div> */}
         </div>
       </div>
       <div className={styles.ctaAccordionHouse}>
         <div className={styles.ctaAccordionHouse__item}>
+          {/* Appel du composant 'Accordion' en lui passant les props demander par le composant */}
           <Accordion title="Description" content={description} />
         </div>
         <div className={styles.ctaAccordionHouse__item}>

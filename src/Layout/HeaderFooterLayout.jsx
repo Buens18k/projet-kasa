@@ -7,6 +7,7 @@ export default function HeaderFooterLayout() {
   return (
     <>
       <Header />
+      {/* Utilise le hook 'Outlet' pour afficher le contenu des routes enfants entre 'Header' et 'Footer' */}
       <Outlet />
       <Footer />
     </>

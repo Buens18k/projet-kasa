@@ -24,16 +24,4 @@
   align-items: center;
 }
 
-// **************  Keyframe ********************
-
-@mixin keyframeArrow($name, $from, $to) {
-  @keyframes #{$name} {
-    from {
-      transform: rotate(#{$from});
-    }
-    to {
-      transform: rotate(#{$to});
-    }
-  }
-}
 
