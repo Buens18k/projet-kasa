@@ -1,6 +1,6 @@
 import style from '../styles/layouts/_home_location.module.scss';
 import Card from './Card';
-import data from '../../data.json';
+// import data from '../../data.json';
 
 import { DataContext } from '../contexts/DataContext';
 import { useContext } from 'react';

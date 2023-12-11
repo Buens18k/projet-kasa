@@ -5,15 +5,15 @@ import ErrorMessage from '../components/Error404.jsx';
 import Footer from '../components/Footer.jsx';
 
 export default function ErrorPage() {
+  // Récupère le code erreur avec le hook 'useRouteError'
   const error = useRouteError();
-  console.log(error);
+  // console.log(error);
 
   return (
     <>
       <Header />
-      <ErrorMessage />
+      <ErrorMessage error={error}/>
       <Footer />
-    
     </>
   );
 }

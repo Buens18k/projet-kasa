@@ -1,4 +1,4 @@
-import data from '../../data.json';
+// import data from '../../data.json';
 import Main from '../components/Main';
 import Caroussel from '../components/Caroussel';
 import Information from '../components/Information.jsx';
@@ -6,7 +6,6 @@ import Information from '../components/Information.jsx';
 import { useParams } from 'react-router-dom';
 import { DataContext } from '../contexts/DataContext.jsx';
 import { useContext } from 'react';
-import Accordion from '../components/Accordion.jsx';
 
 export default function House() {
   // Récupère depuis l'URL, le titre du logement
