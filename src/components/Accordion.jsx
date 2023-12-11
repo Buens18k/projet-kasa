@@ -3,9 +3,10 @@ import ArrowBack from '../assets/arrowBack.png';
 import style from '../styles/layouts/_accordion.module.scss';
 
 export default function Accordion({ title, content }) {
+  // Avec le hook 'useRef', crée une référence mutable à un élément DOM avec une valeur mis à 'null'
   const head = useRef(null);
   const contient = useRef(null);
-
+  // Crée une variable d'état 'isActive' et une fonction 'setIsActive' en utilisant le hook 'useState'
   const [isActive, setIsActive] = useState(false);
 
   // Fonction qui déroule l'accordéon selon la taille et ajoute une propriété pour son style
@@ -14,10 +15,13 @@ export default function Accordion({ title, content }) {
     // console.log(head.current);
     // console.log(contient.current);
 
+    // Condition qui va modifier un style
     if (contient.current.style.maxHeight) {
+      //
       contient.current.style.maxHeight = null;
       contient.current.style.padding = null;
     } else {
+      // Ajuste la taille
       contient.current.style.maxHeight = `${contient.current.scrollHeight}px`;
       contient.current.style.padding = `4%`;
     }
@@ -41,8 +45,9 @@ export default function Accordion({ title, content }) {
           />
         }
       </div>
-      {/* Qui affiche ce que contient le props "content" */}
+      {/* En référence le content approprié au DOM */}
       <div className={style.accordion__content} ref={contient}>
+        {/* Affiche les données contenu dans le prop du titre concerné */}
         {content}
       </div>
     </div>
