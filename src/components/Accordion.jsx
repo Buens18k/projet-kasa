@@ -10,8 +10,9 @@ export default function Accordion({ title, content }) {
 
   // Fonction qui déroule l'accordéon selon la taille et ajoute une propriété pour son style
   const toogleAccordeon = () => {
-    console.log(head.current);
-    console.log(contient.current);
+    // Contrôle
+    // console.log(head.current);
+    // console.log(contient.current);
 
     if (contient.current.style.maxHeight) {
       contient.current.style.maxHeight = null;
@@ -20,11 +21,9 @@ export default function Accordion({ title, content }) {
       contient.current.style.maxHeight = `${contient.current.scrollHeight}px`;
       contient.current.style.padding = `4%`;
     }
+    // Inverse la valeur actuelle de 'isActive'
     setIsActive(!isActive);
   };
-
-  // console.log(isActive);
-  // console.log(key);
 
   return (
     <div className={style.accordion}>

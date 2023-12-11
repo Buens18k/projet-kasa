@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link, useRouteError } from 'react-router-dom';
-import { isRouteErrorResponse } from 'react-router-dom';
-
+import { Link, useRouteError, isRouteErrorResponse } from 'react-router-dom';
 import style from '../styles/layouts/_error.module.scss';
 import Main from './Main';
 
 export default function ErrorMessage() {
+  // Récupère le code erreur avec le hook 'useRouteError'
   const error = useRouteError();
+  // Avec la fonction 'isRouteErrorResponse' de react-router-dom, 
+  // il vérifie si l'erreur de la route est bien une erreur
   if (isRouteErrorResponse(error)) {
     return (
       <Main>
