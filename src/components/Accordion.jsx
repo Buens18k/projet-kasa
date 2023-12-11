@@ -36,7 +36,7 @@ export default function Accordion({ title, content }) {
             src={ArrowBack}
             alt="flèche vers le haut"
             // Joue l'animation en fonction de l'état
-            className={`${style.accordion__arrow} ${isActive ? style.rotateIn : style.rotateOut}`}
+            className={`${style.accordion__arrow} ${isActive ? style.rotate180 : ''}`}
             // Appel au click la fonction
             onClick={toogleAccordeon}
           />
