@@ -44,11 +44,12 @@ function Information({ titleHouse, location, tags, nameHost, pictureHost, rating
       </div>
       <div className={styles.ctaAccordionHouse}>
         <div className={styles.ctaAccordionHouse__item}>
-          {/* Appel du composant 'Accordion' en lui passant les props demander par le composant */}
-          <Accordion title="Description" content={description} />
+          {/* Appel du composant 'Accordion' en lui passant les props demander par le composant ou un message */}
+          <Accordion title="Description" content={description || 'Aucune description pour le moment'} />
         </div>
         <div className={styles.ctaAccordionHouse__item}>
-          <Accordion title="Equipements" content={equipmentsList} />
+          {/* Appel du composant 'Accordion' en verifiant si la liste est supèrieur à 0 si oui affiche la liste des équipements si non alors affiche un message */}
+          <Accordion title="Equipements" content={equipments.length > 0 ? equipmentsList : 'Aucun équipement renseigner pour le moment'} />
         </div>
       </div>
     </>
