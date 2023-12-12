@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useRouteError, isRouteErrorResponse } from 'react-router-dom';
+import { Link, isRouteErrorResponse } from 'react-router-dom';
 import style from '../styles/layouts/_error.module.scss';
 import Main from './Main';
 

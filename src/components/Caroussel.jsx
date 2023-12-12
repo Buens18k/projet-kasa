@@ -30,7 +30,7 @@ export default function Caroussel({ pictures }) {
         {/* Si le tableau des pictures est supèrieur à 1 alors affiche la flèche */}
         {pictures.length > 1 && <LeftArrow onClick={prevImg} />}
         <img src={pictures[currentImage]} alt="photo de l'appartement" className={style.caroussel__image} />
-        {pictures.length > 1 && <RightArrow onClick={prevImg} />}
+        {pictures.length > 1 && <RightArrow onClick={nextImg} />}
       </div>
     </>
   );

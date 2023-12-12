@@ -18,6 +18,7 @@ const AppRouter = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+        // Appel la fonction alias 'homeloader' pour charger les données avant d'afficher le contenu
         loader: homeloader,
       },
       {

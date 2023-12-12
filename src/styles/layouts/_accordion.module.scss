@@ -10,7 +10,6 @@
   width: 70%;
 
   &__item {
-    background-color: $secondary-color;
     border-radius: 5px 5px 8px 8px;
     width: 100%;
     height: auto;
@@ -67,7 +66,7 @@
     flex-direction: column;
     align-items: flex-start;
     background: #f6f6f6;
-    color: red;
+    // color: red;
     max-height: 0;
     overflow: hidden;
     // Animation du content sur la propriété

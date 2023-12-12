@@ -12,12 +12,14 @@ function RatingStars({ ratings }) {
   return (
     <>
       <div className={style.ctaInformation__profil__rating}>
-        {/* Parcours le tableau des nombres d'étoiles en utilisant l'index
-        et affiche le nombre d'étoile Rouge reçu en props, sinon affiche les étoiles grises pour le reste */}
+        {/* Itère sur le tableau 'numbersStar', et pour chaque élément 'star' et son index */}
         {numberStars.map((star, index) => {
+          // Si la valeur de 'star' est infèrieur ou égale à 'ratings'
           if (star <= ratings) {
+            // Vrai : affiche la source 'étoile rouge'
             return <img className={style.ctaInformation__profil__rating__star} key={index} src={StarRed} alt="étoile rouge" />;
           } else {
+            // Sinon : affiche un étoile grise
             return <img className={style.ctaInformation__profil__rating__star} key={index} src={Star} alt="étoile" />;
           }
         })}

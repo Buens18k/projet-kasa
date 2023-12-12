@@ -7,7 +7,8 @@ import Footer from '../components/Footer.jsx';
 export default function ErrorPage() {
   // Récupère le code erreur avec le hook 'useRouteError'
   const error = useRouteError();
-  // console.log(error);
+  // Controle pour le débugage
+  console.log(error);
 
   return (
     <>

@@ -17,11 +17,9 @@ export default function Accordion({ title, content }) {
 
     // Condition qui va modifier un style
     if (contient.current.style.maxHeight) {
-      //
       contient.current.style.maxHeight = null;
       contient.current.style.padding = null;
     } else {
-      // Ajuste la taille
       contient.current.style.maxHeight = `${contient.current.scrollHeight}px`;
       contient.current.style.padding = `20px 20px 20px 15px`;
     }
@@ -50,7 +48,7 @@ export default function Accordion({ title, content }) {
         {/* Applique un style au content si l'état est active */}
         <div className={`${style.accordion__content__inside} ${isActive && style.active}`}>
           {/* Affiche les données contenu dans le prop du titre concerné */}
-          {content}
+          {content || 'Pas de contenu disponible'}
         </div>
       </div>
     </div>
