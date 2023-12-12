@@ -3,9 +3,9 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import HeaderFooterLayout from './Layout/HeaderFooterLayout';
 
-import Home from './pages/Home';
+import Home, { loader as homeloader } from './pages/Home';
 import ErrorPage from './pages/Error-page';
-import House from './pages/House';
+import House, { loader as houseloader } from './pages/House';
 import About from './pages/About';
 
 // Application route
@@ -18,10 +18,12 @@ const AppRouter = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+        loader: homeloader,
       },
       {
         path: '/house/:title',
         element: <House />,
+        loader: houseloader,
       },
       {
         path: '/about',

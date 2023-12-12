@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { DataProvider } from './contexts/DataContext';
 import { RouterProvider } from 'react-router-dom';
 
 import AppRouter from './AppRouter';
@@ -12,10 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // Activation du mode strict de React pour effectuer des vérifications et affiche dans la console
   <React.StrictMode>
-    {/* Donne le contexte 'DataContext' aux enfants avec la variable 'DataProvider' */}
-    <DataProvider>
-      {/* Utilise la fonction 'RouterProvider pour définir avec la propriété 'router' le router 'AppRouter' de l'app */}
-      <RouterProvider router={AppRouter} />
-    </DataProvider>
+    {/* Utilise la fonction 'RouterProvider pour définir avec la propriété 'router' le router 'AppRouter' de l'app */}
+    <RouterProvider router={AppRouter} />
   </React.StrictMode>
 );

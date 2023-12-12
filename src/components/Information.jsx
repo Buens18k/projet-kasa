@@ -3,7 +3,6 @@ import style from '../styles/layouts/_information.module.scss';
 import styles from '../styles/layouts/_accordion.module.scss';
 import RatingStars from './RatingStars';
 import Accordion from '../components/Accordion';
-import House from '../pages/House';
 
 function Information({ titleHouse, location, tags, nameHost, pictureHost, ratings, description, equipments }) {
   // Divise la chaîne en utilisant ' ' comme delimiteur
