@@ -11,7 +11,7 @@ export default function Card({ card }) {
   return (
     // Utilise l'élément 'Link' pour rediriger l'utilisateur lors d'un click vers une URL définssant le titre du logement concerné 
     <Link to={`/house/${slug}`} className={style.home__location__card}>
-      <img className={style.home__location__card__img} src={card.cover} alt={card.title} />
+      <img className={style.home__location__card__img} src={card.cover} alt={card.title} width='100' height='100' loading='lazy'/>
       <h2 className={style.home__location__card__title}>{card.title}</h2>
     </Link>
   );

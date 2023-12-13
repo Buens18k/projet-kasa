@@ -3,7 +3,7 @@ import Main from '../components/Main';
 import Caroussel from '../components/Caroussel';
 import Information from '../components/Information.jsx';
 
-import { useLoaderData } from 'react-router-dom';
+import { redirect, useLoaderData } from 'react-router-dom';
 
 // Crée une fonction qui va retourner les valeurs d'un logement
 export async function loader({ params }) {
@@ -13,7 +13,12 @@ export async function loader({ params }) {
   // puis vérifie si le titre correspond au slug
   // Si les données correspond alors stock les valeur de ce titre dans la variable 'house'
   const house = data.find((h) => h.title.toLowerCase().split(' ').join('-') === title);
-  return { house };
+  console.log(house)
+  if (house === undefined) {
+    return redirect(`/error`);
+  } else {
+    return { house };
+  }
 }
 
 export default function House() {
