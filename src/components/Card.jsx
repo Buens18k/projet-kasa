@@ -9,7 +9,7 @@ export default function Card({ card }) {
   const slug = card.title.toLowerCase().split(' ').join('-');
 
   return (
-    // Utilise l'élément 'Link' pour rediriger l'utilisateur lors d'un click vers une URL définssant le titre du logement concerné 
+    // Utilise l'élément 'Link' pour rediriger l'utilisateur lors d'un click vers une URL définssant le titre du logement concerné
     <Link to={`/house/${slug}`} className={style.home__location__card}>
       <img className={style.home__location__card__img} src={card.cover} alt={card.title} />
       <h2 className={style.home__location__card__title}>{card.title}</h2>

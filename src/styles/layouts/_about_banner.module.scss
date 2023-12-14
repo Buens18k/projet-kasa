@@ -1,3 +1,5 @@
+@import '../utils/variables';
+
 .about_banner {
   display: flex;
   width: 87%;
@@ -13,7 +15,7 @@
     content: '';
     width: 100%;
     opacity: 0.1;
-    background: #000;
+    background: $black;
     border-radius: 25px;
   }
 }

@@ -13,6 +13,7 @@ export default function ErrorPage() {
   return (
     <>
       <Header />
+      {/* Appel du compoosant en lui passant en prop l'objet 'error' */}
       <ErrorMessage error={error}/>
       <Footer />
     </>

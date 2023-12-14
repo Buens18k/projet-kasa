@@ -23,7 +23,7 @@ export default function Accordion({ title, content }) {
       contient.current.style.maxHeight = `${contient.current.scrollHeight}px`;
       contient.current.style.padding = `20px 20px 20px 15px`;
     }
-    // Inverse la valeur actuelle de 'isActive'
+    // Inverse la valeur actuelle de 'isActive'(MAJ 'isActive')
     setIsActive(!isActive);
   };
 
@@ -47,7 +47,7 @@ export default function Accordion({ title, content }) {
       <div className={style.accordion__content} ref={contient}>
         {/* Applique un style au content si l'état est active */}
         <div className={`${style.accordion__content__inside} ${isActive && style.active}`}>
-          {/* Affiche les données contenu dans le prop du titre concerné */}
+          {/* Affiche les données contenu dans le prop du titre concerné (opérateur ternaire ' ||') ou affiche un message */}
           {content || 'Pas de contenu disponible'}
         </div>
       </div>
