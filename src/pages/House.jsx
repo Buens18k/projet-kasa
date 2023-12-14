@@ -13,10 +13,13 @@ export async function loader({ params }) {
   // puis vérifie si le titre correspond au slug
   // Si les données correspond alors stock les valeur de ce titre dans la variable 'house'
   const house = data.find((h) => h.title.toLowerCase().split(' ').join('-') === title);
-  console.log(house)
+
+  // Condition URL si elle ne correspond pas
   if (house === undefined) {
+    // Redirige vers la page 'Error'
     return redirect(`/error`);
   } else {
+    // Sinon retourne l'objet
     return { house };
   }
 }

@@ -20,6 +20,7 @@ function Information({ titleHouse, location, tags, nameHost, pictureHost, rating
       <div className={style.ctaInformation}>
         <div className={style.ctaInformation__house}>
           <div className={style.ctaInformation__house__info}>
+            {/* Passe le prop 'titleHouse' */}
             <h1 className={style.ctaInformation__house__info__title}>{titleHouse}</h1>
             <p className={style.ctaInformation__house__info__location}>{location}</p>
           </div>
@@ -37,6 +38,7 @@ function Information({ titleHouse, location, tags, nameHost, pictureHost, rating
               <p className={style.ctaInformation__profil__host__name__first}>{firstName}</p>
               <p className={style.ctaInformation__profil__host__name__last}>{lastName}</p>
             </div>
+            {/* Utilisation d'un opérateur ternaire ' ? ' pour conditionner selon les données reçues oui ou non */}
             <img className={style.ctaInformation__profil__host__pictureHost} src={pictureHost ? pictureHost : Host} alt="portrait de l'hôte" />
           </div>
           {/* Appel du composant 'RatingStars' en lui donnant le prop 'ratings' */}
@@ -45,7 +47,7 @@ function Information({ titleHouse, location, tags, nameHost, pictureHost, rating
       </div>
       <div className={styles.ctaAccordionHouse}>
         <div className={styles.ctaAccordionHouse__item}>
-          {/* Appel du composant 'Accordion' en lui passant les props demander par le composant ou un message */}
+          {/* Appel du composant 'Accordion' en lui passant les props demander par le composant (opérateur ternaire ) '||(ou)' un message */}
           <Accordion title="Description" content={description || 'Aucune description pour le moment'} />
         </div>
         <div className={styles.ctaAccordionHouse__item}>

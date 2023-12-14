@@ -9,6 +9,7 @@ import Location from '../components/Location';
 
 // Crée une fonction asynchrone pour renvoyez les données contenu dans la variable 'house'
 export async function loader({ params }) {
+  // Appel du fichier 'data.JSON' en dure car présent (si API 'await' 'fetch')
   const house = data;
   return { house };
 }
