@@ -9,9 +9,9 @@ import './styles/style.scss';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Indique à React de rendre les composants dans le conteneur racine
 root.render(
-  // Activation du mode strict de React pour effectuer des vérifications et affiche dans la console
+  // Appelle le composant 'React.strictMode' qui active des vérifications et des avertissements supplémentaires pour ces composants enfants
   <React.StrictMode>
-    {/* Utilise la fonction 'RouterProvider pour définir avec la propriété 'router' le router 'AppRouter' de l'app */}
+    {/* Utilise la fonction 'RouterProvider' pour définir avec la propriété 'router' le router 'AppRouter' de l'app */}
     <RouterProvider router={AppRouter} />
   </React.StrictMode>
 );
