@@ -1,0 +1,58 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+:root {
+    box-sizing: border-box;
+    background-color: $primary-color;
+}
+
+html, body {
+    max-width: 1440px;
+    height: auto;
+    margin: 0 auto;
+
+    @include mobile {
+        min-width: 375px
+    }
+}
+
+#root {
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    display: flex;
+    margin: 0 auto;
+}
+
+main {
+    @include flex-center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+footer {
+    @include flex-center;
+}
+
+h1 {
+    @include flex-center;
+    color: $primary-color;
+}
+
+h2 {
+    @include flex-center;
+    color: $primary-color;
+}
+
+h3 {
+    @include flex-center;
+    color: $primary-color;
+    margin: 0;
+}
+
+

@@ -1,0 +1,72 @@
+@import '../utils/mixins';
+
+.home__location {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px 60px;
+  width: 80%;
+  border-radius: 25px;
+  background: #f6f6f6;
+  padding: 56px 50px 43px 50px;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    width: 78%;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    width: 87%;
+    padding: 0;
+  }
+
+  &__card {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+
+    @include mobile {
+      height: 255px;
+    }
+
+    &:hover {
+      & img {
+        transform: scale(1.1);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+      @include mobile {
+        height: 255px;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      z-index: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__title {
+      position: absolute;
+      top: 74%;
+      padding: 0px 20px 20px 20px;
+      height: 52px;
+      z-index: 2;
+    }
+  }
+}

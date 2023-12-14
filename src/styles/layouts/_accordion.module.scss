@@ -1,0 +1,115 @@
+@import '../utils/mixins.scss';
+@import '../utils/variables';
+
+.ctaAccordionAbout {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 38px;
+  width: 70%;
+
+  &__item {
+    border-radius: 5px 5px 8px 8px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.ctaAccordionHouse {
+  display: flex;
+  gap: 76px;
+  width: 87%;
+
+  @include mobile {
+    gap: 30px;
+    margin-top: 13.5px;
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 50%;
+    list-style-type: none;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    background-color: $secondary-color;
+    color: $tertiary;
+    padding: 10px 20px 10px 15px;
+    border-radius: 5px;
+    height: 100%;
+
+    @include mobile {
+      padding: 5px 10px 5px 10px;
+    }
+
+    &__title {
+      @include mobile {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: $tertiary;
+    color: $secondary-color;
+    max-height: 0;
+    overflow: hidden;
+    // Animation du content sur la propriété
+    transition: all 0.5s ease;
+    padding: 0px 20px 0px 15px;
+    border-radius: 0px 0px 5px 5px;
+
+    @include tablet {
+      font-weight: 400;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+
+    &__is_open {
+      padding: 20px 20px 20px 15px;
+    }
+    &__inside {
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__arrow {
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: all 0.5s ease;
+
+    @include mobile {
+      width: 32px;
+    }
+  }
+}
+
+// Animation de la flèche
+.rotate180 {
+  transform: rotate(-180deg);
+  transition: all 0.5s ease;
+}
+// Animation du content de l'accordéon
+.active {
+  opacity: 1;
+  transform: translateY(0px);
+}

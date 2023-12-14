@@ -1,0 +1,54 @@
+@import '../utils/mixins.scss';
+
+.caroussel {
+  display: flex;
+  width: 87%;
+  height: 415px;
+  position: relative;
+  top: 20%;
+  border-radius: 21px;
+
+  @include tablet {
+    height: 310px;
+  }
+
+  @include mobile {
+    height: 255px;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 21px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 39%;
+    width: 5%;
+    height: 19%;
+    cursor: pointer;
+
+    @include mobile {
+      width: 5%;
+      height: 9%;
+      top: 45%;
+    }
+  }
+
+  &__arrowLeft {
+    left: 21px;
+
+    @include mobile {
+      left: 10px;
+    }
+  }
+
+  &__arrowRight {
+    right: 21px;
+
+    @include mobile {
+      right: 10px;
+    }
+  }
+}

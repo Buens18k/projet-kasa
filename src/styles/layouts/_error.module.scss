@@ -1,0 +1,57 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.ctaErrorMsg {
+  @include flex-column-center;
+  width: 100%;
+  margin: 0 auto;
+  gap: 139px;
+
+  @include mobile {
+    gap: 113px;
+  }
+
+  &__title {
+    font-size: 288px;
+    color: $secondary-color;
+    font-weight: 700;
+    width: 100%;
+    height: 263px;
+    margin: 0 auto;
+    padding-top: 89px;
+
+    @include tablet {
+      font-size: 179px;
+    }
+
+    @include mobile {
+      padding-top: 58px;
+      font-size: 96px;
+      height: 99px;
+    }
+  }
+
+  &__message {
+    font-size: 36px;
+    color: $secondary-color;
+
+    @include tablet {
+      font-size: 27px;
+      margin: 0 auto;
+    }
+    @include mobile {
+      font-size: 18px;
+      width: 59%;
+      margin: 0 auto;
+    }
+  }
+
+  &__link {
+    color: $secondary-color;
+    padding-bottom: 89px;
+
+    @include mobile {
+      padding-bottom: 103px;
+    }
+  }
+}
