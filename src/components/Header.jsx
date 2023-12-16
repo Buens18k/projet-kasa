@@ -11,7 +11,7 @@ function Header() {
       <nav className={styles.nav}>
         <ul>
           <li>
-            {/* Utilisation du hook 'NavLink' qui reconnait si active ou non */}
+            {/* Utilisation le composant 'NavLink' qui reconnait si active ou non */}
             <NavLink to="/">Accueil</NavLink>
           </li>
           <li>
