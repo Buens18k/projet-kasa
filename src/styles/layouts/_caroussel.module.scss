@@ -16,6 +16,17 @@
     height: 255px;
   }
 
+  &__numberPicture {
+    position: absolute;
+    top: 90%;
+    right: 50%;
+    color: aliceblue;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
   &__image {
     width: 100%;
     object-fit: cover;

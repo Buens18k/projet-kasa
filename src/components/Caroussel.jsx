@@ -27,6 +27,10 @@ export default function Caroussel({ pictures }) {
   return (
     <>
       <div className={style.caroussel}>
+        <div className={style.caroussel__numberPicture}>
+          {/* Affiche le numéro de l'image actuelle sur le nombre total d'images */}
+          {currentImage + 1}/{pictures.length}
+        </div>
         {/* Si le tableau des pictures est supèrieur à 1 alors affiche la flèche */}
         {pictures.length > 1 && <LeftArrow onClick={prevImg} />}
         <img src={pictures[currentImage]} alt="photo de l'appartement" className={style.caroussel__image} />
