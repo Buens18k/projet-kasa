@@ -7,7 +7,9 @@ import styles from '../styles/layouts/_header.module.scss';
 function Header() {
   return (
     <header className={styles.header}>
-      <img src={logo} alt="Logo KASA" className={styles.logo} />
+      <NavLink to="/">
+        <img src={logo} alt="Logo KASA" className={styles.logo} />
+      </NavLink>
       <nav className={styles.nav}>
         <ul>
           <li>
